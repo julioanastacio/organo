@@ -5,16 +5,6 @@ import InputText from '../InputText/';
 import './Form.css';
 
 const Form = (props) => {
-  const teams = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Devops',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão',
-  ];
-
   const [nome, setNome] = useState('');
   const [cargo, setCargo] = useState('');
   const [imagem, setImagem] = useState('');
@@ -28,6 +18,10 @@ const Form = (props) => {
       imagem,
       time,
     });
+    setNome('');
+    setCargo('');
+    setImagem('');
+    setTime('');
   };
 
   return (
@@ -57,7 +51,7 @@ const Form = (props) => {
         <Dropdown
           required='true'
           label='Time'
-          items={teams}
+          items={props.teams}
           value={time}
           onChange={(value) => setTime(value)}
         />
