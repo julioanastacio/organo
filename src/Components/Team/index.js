@@ -11,6 +11,8 @@ const Team = (props) => {
         <div className='employees'>
           {props.employees.map((employee) => (
             <Employee
+              backgroundColor={props.primaryColor}
+              key={employee.nome}
               name={employee.nome}
               role={employee.cargo}
               image={employee.imagem}
