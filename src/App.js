@@ -49,6 +49,10 @@ const App = () => {
     setEmployees([...employees, employee]);
   };
 
+  function deleteEmployee() {
+    console.log('Colaborador deletado!');
+  }
+
   return (
     <div className='App'>
       <Banner />
@@ -66,6 +70,7 @@ const App = () => {
           employees={employees.filter(
             (employee) => employee.time === team.name,
           )}
+          onDelete={deleteEmployee}
         />
       ))}
 

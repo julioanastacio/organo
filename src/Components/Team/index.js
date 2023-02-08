@@ -16,6 +16,7 @@ const Team = (props) => {
               name={employee.nome}
               role={employee.cargo}
               image={employee.imagem}
+              onDelete={props.onDelete}
             />
           ))}
         </div>
